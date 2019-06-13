@@ -33,9 +33,9 @@ public class CLO_Calc {
 			for (int i = 1; i < operands.size(); i++){
 				switch (operator){
 				case "+": result += operands.get(i); break;
-				case "-": result += operands.get(i); break;
-				case "*": result += operands.get(i); break;
-				case "/": result += operands.get(i); break;
+				case "-": result -= operands.get(i); break;
+				case "*": result *= operands.get(i); break;
+				case "/": result /= operands.get(i); break;
 				}
 			}
 			System.out.println(new BigDecimal(result).setScale(2, RoundingMode.HALF_UP));
